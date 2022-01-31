@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>display result</title>
+</head>
+<body>
+<!--<img src="{{ user_image }}" alt="User Image">-->
+<!--{{data}}-->
+{%for img in data%}
+<img src="data:image/jpeg;base64,{{img}}"  alt="Chart" height="500" width="500">
+
+{%endfor%}
+
+<script>
+    data = "{{data}}"
+    data = data.replace("b&#39;", "") //to get rid of start curly brace code
+    data = data.replace("&#39;", "")  //to get rid of end curly bracecode
+
+    document.getElementById("img").src = "data:image/png;base64,"+data; // set src
+</script>
+</body>
+</html>

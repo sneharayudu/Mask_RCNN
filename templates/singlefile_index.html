@@ -1,0 +1,35 @@
+<!doctype html>
+<title>MASK R_CNN Upload </title>
+<h2>MASK R_CNN</h2>
+<h2>Select a file to klglgan</h2>
+<!--<p>-->
+<!--    {% with messages = get_flashed_messages() %}-->
+<!--    {% if messages %}-->
+<!--<ul>-->
+<!--    {% for message in messages %}-->
+<!--    <li>{{ message }}</li>-->
+<!--    {% endfor %}-->
+<!--</ul>-->
+<!--{% endif %}-->
+<!--{% endwith %}-->
+<!--</p>-->
+<!--{% if filename %}-->
+<!--<div>-->
+<!--    <img src="{{ url_for('display_image', filename=filename) }}">-->
+<!--</div>-->
+<!--{% endif %}-->
+<form method="post" action="/display_result_imgs" enctype="multipart/form-data">
+    <dl>
+        <p>
+            <input type="file"  autocomplete="off" name="files" multiple>
+        </p>
+    </dl>
+    <select name = "class_list">
+        <option value = "printer monitor keyboard" selected>printer monitor keyboard</option>
+<!--        <option value = "Java">Java</option>-->
+<!--        <option value = "Discrete Mathematics">Discrete Mathematics</option>-->
+    </select>
+    <p>
+        <input type="submit" value="Submit">
+    </p>
+</form>
